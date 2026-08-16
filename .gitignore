@@ -22,3 +22,7 @@ Thumbs.db
 # Source photographs (personal) — keep originals out of the repo
 scripts/profile-original*.jpeg
 scripts/profile-original*.jpg
+
+# Local app state
+.freebuff/
+
