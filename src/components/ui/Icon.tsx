@@ -1,0 +1,52 @@
+import {
+  Activity,
+  Banknote,
+  Code,
+  FileSearch,
+  GitBranch,
+  Github,
+  Globe,
+  Layers,
+  Linkedin,
+  Mail,
+  MonitorDot,
+  Network,
+  Radar,
+  ScrollText,
+  Server,
+  Shield,
+  ShieldCheck,
+  Siren,
+  Target,
+  Terminal,
+  Wrench,
+  type LucideIcon,
+} from "lucide-react";
+
+const ICONS: Record<string, LucideIcon> = {
+  activity: Activity,
+  banknote: Banknote,
+  code: Code,
+  "file-search": FileSearch,
+  "git-branch": GitBranch,
+  github: Github,
+  globe: Globe,
+  layers: Layers,
+  linkedin: Linkedin,
+  mail: Mail,
+  "monitor-dot": MonitorDot,
+  network: Network,
+  radar: Radar,
+  "scroll-text": ScrollText,
+  server: Server,
+  shield: Shield,
+  "shield-check": ShieldCheck,
+  siren: Siren,
+  target: Target,
+  terminal: Terminal,
+  wrench: Wrench,
+};
+
+export function iconFor(name: string): LucideIcon {
+  return ICONS[name] ?? Shield;
+}
