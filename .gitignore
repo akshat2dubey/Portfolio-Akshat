@@ -26,3 +26,6 @@ scripts/profile-original*.jpg
 # Local app state
 .freebuff/
 
+
+# Build cache
+.vite/
