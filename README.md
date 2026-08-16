@@ -28,31 +28,6 @@ npm run build     # typechecks + builds to dist/
 npm run preview   # serve the production build locally
 ```
 
-## 🖼️ Photo & asset regeneration
-
-Your portrait is optimized automatically:
-
-1. Drop your portrait at `scripts/profile-original.jpeg` (highest resolution you have).
-2. Run `npm run assets` — regenerates:
-   - `src/assets/profile.jpg` (640×640 circular-crop-ready portrait)
-   - `public/og-image.png` (1200×630 social preview)
-   - `public/favicon-32.png`
-
-Source photos are git-ignored; only the generated assets are committed.
-
-## ✏️ Editing your content
-
-All content lives in `src/data/` — no component edits needed:
-
-| File | What it controls |
-| --- | --- |
-| `src/data/site.ts` | Name, email, GitHub & LinkedIn links (also `index.html` metadata) |
-| `src/data/skills.ts` | Skill categories + current focus |
-| `src/data/projects.ts` | Project cards — **add future projects here** |
-| `src/data/securebank.ts` | SecureBank stages + architecture layers |
-| `src/data/journey.ts` | Journey timeline + milestones/goals |
-
-**Before you go live:** replace the placeholder email in `src/data/site.ts` (`email` field) with your real address.
 
 ## 🗂️ Structure
 
