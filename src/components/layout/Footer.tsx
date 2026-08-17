@@ -38,6 +38,7 @@ export function Footer() {
           </a>
           <a
             href={`mailto:${SITE.email}`}
+            title={SITE.email}
             className="flex items-center gap-2 rounded-full border border-edge-strong px-4 py-2 text-sm text-muted transition-colors duration-300 hover:border-cyan-glow/50 hover:text-cyan-soft"
           >
             <Mail className="h-4 w-4" aria-hidden="true" /> Email

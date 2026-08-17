@@ -108,23 +108,32 @@ export function Contact() {
         </div>
 
         <Reveal delay={0.14}>
-          <div className="glass mt-6 flex flex-col items-center justify-between gap-6 rounded-2xl p-7 sm:flex-row sm:p-8">
-            <div className="flex items-center gap-4">
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-edge-strong bg-white/[0.04]">
-                <Mail className="h-5 w-5 text-cyan-glow" aria-hidden="true" />
-              </span>
-              <div>
-                <p className="font-display text-base font-semibold text-body">Prefer email?</p>
-                <p className="text-sm text-muted">I read everything — drop me a line.</p>
+          <div className="glow-border relative mt-6 overflow-hidden rounded-2xl bg-ink/80">
+            <div className="absolute inset-0 bg-grid-fine opacity-50" aria-hidden="true" />
+            <div className="relative flex flex-col items-center justify-between gap-6 p-7 sm:flex-row sm:p-8">
+              <div className="flex items-center gap-4">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-glow/35 bg-cyan-glow/10 shadow-[0_0_20px_rgba(34,211,238,0.2)]">
+                  <Mail className="h-5 w-5 text-cyan-glow" aria-hidden="true" />
+                </span>
+                <div>
+                  <p className="font-display text-base font-semibold text-body">Prefer email?</p>
+                  <a
+                    href={`mailto:${SITE.email}`}
+                    className="mt-0.5 block font-mono text-[0.86rem] text-cyan-soft transition-colors duration-300 hover:text-cyan-glow"
+                  >
+                    {SITE.email}
+                  </a>
+                  <p className="text-sm text-muted">I read everything — drop me a line.</p>
+                </div>
               </div>
+              <a
+                href={`mailto:${SITE.email}?subject=Hello%20from%20your%20portfolio`}
+                className="inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500/90 to-blue-500/90 px-6 py-3 text-sm font-semibold text-[#03131a] transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.45)]"
+              >
+                <Mail className="h-4 w-4" aria-hidden="true" />
+                Email me
+              </a>
             </div>
-            <a
-              href={`mailto:${SITE.email}?subject=Hello%20from%20your%20portfolio`}
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500/90 to-blue-500/90 px-6 py-3 text-sm font-semibold text-[#03131a] transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.45)]"
-            >
-              <Mail className="h-4 w-4" aria-hidden="true" />
-              Email me
-            </a>
           </div>
         </Reveal>
 

@@ -3,6 +3,7 @@ import { ArrowRight, Github, Landmark } from "lucide-react";
 import { SectionHeading } from "../ui/SectionHeading";
 import { Reveal } from "../ui/Reveal";
 import { ButtonLink } from "../ui/ButtonLink";
+import { TiltCard } from "../ui/TiltCard";
 import { iconFor } from "../ui/Icon";
 import { PROJECTS, SECUREBANK_STAGE_CHIPS } from "../../data/projects";
 import { SECUREBANK_STAGES } from "../../data/securebank";
@@ -28,16 +29,17 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
   const Icon = iconFor(project.id === "securebank" ? "shield" : "layers");
   return (
     <Reveal delay={delay} className="h-full">
-      <motion.article
-        whileHover={{ y: -6 }}
-        transition={{ type: "spring", stiffness: 280, damping: 22 }}
-        className="group glass relative flex h-full flex-col overflow-hidden rounded-2xl p-6"
-      >
-        <div
-          className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-grid-fine"
-          aria-hidden="true"
-        />
-        <div className="relative flex h-full flex-col">
+      <TiltCard max={4} className="h-full">
+        <motion.article
+          whileHover={{ y: -6 }}
+          transition={{ type: "spring", stiffness: 280, damping: 22 }}
+          className="group glass relative flex h-full flex-col overflow-hidden rounded-2xl p-6"
+        >
+          <div
+            className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-grid-fine"
+            aria-hidden="true"
+          />
+          <div className="relative flex h-full flex-col">
           <div className="mb-4 flex items-start justify-between">
             <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-cyan-glow/30 bg-cyan-glow/10 transition-shadow duration-300 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]">
               <Icon className="h-5 w-5 text-cyan-glow" aria-hidden="true" />
@@ -94,7 +96,8 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
             )}
           </div>
         </div>
-      </motion.article>
+        </motion.article>
+      </TiltCard>
     </Reveal>
   );
 }
@@ -102,7 +105,8 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
 function FlagshipCard() {
   return (
     <Reveal>
-      <div className="glow-border relative mb-8 overflow-hidden rounded-3xl bg-ink/80">
+      <TiltCard max={2} className="mb-8">
+        <div className="glow-border relative overflow-hidden rounded-3xl bg-ink/80">
         <div className="absolute inset-0 bg-grid-fine opacity-50" aria-hidden="true" />
         <div
           aria-hidden="true"
@@ -176,7 +180,8 @@ function FlagshipCard() {
             })}
           </div>
         </div>
-      </div>
+        </div>
+      </TiltCard>
     </Reveal>
   );
 }

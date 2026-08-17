@@ -1,6 +1,9 @@
-import { useMemo, useState } from "react";
+import { lazy, Suspense, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ExternalLink, Info } from "lucide-react";
+
+// Dedicated banking-topology visualization behind the interactive layers.
+const SecureBankScene = lazy(() => import("../three/SecureBankScene"));
 import { SectionHeading } from "../ui/SectionHeading";
 import { Reveal } from "../ui/Reveal";
 import { TiltCard } from "../ui/TiltCard";
@@ -41,6 +44,9 @@ export function SecureBank() {
         className="absolute right-0 top-24 h-[420px] w-[420px] rounded-full blur-[130px]"
         style={{ background: "radial-gradient(circle, rgba(14,116,144,0.25), transparent 70%)" }}
       />
+      <Suspense fallback={null}>
+        <SecureBankScene />
+      </Suspense>
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="// securebank"

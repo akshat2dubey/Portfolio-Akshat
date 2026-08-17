@@ -11,9 +11,9 @@ export const SITE = {
   tagline:
     "Building secure systems, exploring cybersecurity, and turning theory into practical security engineering.",
   location: "India",
-  /** Replace with your real email when ready. Clicking the email button
-   *  in Contact / Footer opens a draft to this address. */
-  email: "hello@example.com",
+  /** Professional contact email. The "Email me" CTA in Contact / Footer
+   *  opens a draft to this address. */
+  email: "akshatd166@gmail.com",
   github: "https://github.com/akshat2dubey",
   githubHandle: "akshat2dubey",
   linkedin: "https://www.linkedin.com/in/akshat-dubey-307bb63a3",
